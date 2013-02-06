@@ -35,11 +35,11 @@ class Home extends My_Controller {
 
         // get the vedio URL
         $myFile = "uploads/vedio_url.txt";
-        $video=  unserialize(file_get_contents($myFile));
-        
+        $video = unserialize(file_get_contents($myFile));
+
         $this->data['video_url'] = $video['video_url'];
-        $this->data['video_img'] = ($video['video_img']&&  file_exists(trim($video['video_img'],'/')))?
-                $video['video_img']: base_url().('layout/images/video_placeholder.png');
+        $this->data['video_img'] = ($video['video_img'] && file_exists(trim($video['video_img'], '/'))) ?
+                $video['video_img'] : base_url() . ('layout/images/video_placeholder.png');
 //        pre_print($this->data);
         $this->template->add_css('layout/css/themes/default/default.css');
         $this->template->add_css('layout/css/themes/light/light.css');
@@ -89,7 +89,7 @@ class Home extends My_Controller {
         $tab = ProductTabsTable::getInstance()->find($tab_id);
 
         $this->data['prod_imagges'] = TabImagesTable::getTabImages($tab->tab_id, TRUE);
-        $this->data['pdfs'] = ProductPdfsTable::getAllProductPDFs($tab->prod_id, get_language_id(),$tab_id);
+        $this->data['pdfs'] = ProductPdfsTable::getAllProductPDFs($tab->prod_id, get_language_id(), $tab_id);
         $this->load_product_info($tab->prod_id, FALSE);
     }
 
@@ -109,7 +109,7 @@ class Home extends My_Controller {
 
         if (!isset($this->data['prod_imagges']) || !$this->data['prod_imagges'])
             $this->data['prod_imagges'] = ProductImagesTable::getImages($prod_id);
-        $this->data['prod_tabs'] = ProductTabsTable::getTabs($prod_id, get_language_id(), true,true);
+        $this->data['prod_tabs'] = ProductTabsTable::getTabs($prod_id, get_language_id(), true, true);
         $this->data['prod_id'] = $prod_id;
         if (!isset($this->data['pdfs']) || !$this->data['pdfs'])
             $this->data['pdfs'] = ProductPdfsTable::getAllProductPDFs($prod_id, get_language_id());
@@ -119,14 +119,14 @@ class Home extends My_Controller {
         $this->template->render();
     }
 
-    function faq($formatted='none') {
+    function faq($formatted = 'none') {
         $this->data['faqs'] = FaqsTable::getFaqs(true, true);
 //        echo more_less_str(strip_tags($this->data['faqs'][4]['FaqDetails'][0]['faq_answer'],'<br>'));exit;
-       
+
         $url = UrlsTable::getInstance()->findOneBy('url_original', URL_PREFIX_FAQS, Doctrine_Core::HYDRATE_ARRAY);
         $this->data['banner_path'] = get_banner_bath("URL_PREFIX_FAQS");
         $this->data['page_title'] = $url['url_page_title'];
-        $this->data['formatted']=$formatted;
+        $this->data['formatted'] = $formatted;
         $this->template->write_view('content', 'home/faq', $this->data, FALSE);
         $this->template->render();
     }
@@ -199,7 +199,7 @@ class Home extends My_Controller {
             $this->session->set_flashdata('msg', 'Data has been sent successfully!');
             redirect(site_url('customer-services'));
         }
-        
+
         $url = UrlsTable::getInstance()->findOneBy('url_original', URL_PREFIX_CUSTOMERSERVICE, Doctrine_Core::HYDRATE_ARRAY);
         $this->data['page_title'] = $url['url_meta_title'];
         $this->data['countries'] = CountriesTable::getCountries();
@@ -279,6 +279,9 @@ class Home extends My_Controller {
             redirect(site_url('home/contact_us'));
         }
 
+        $page_data = PagesTable::getPageData('contact-us');
+        $this->data['page_content'] = $page_data['content'];
+        
         $this->data['page_title'] = 'Contact Us';
         $this->data['countries'] = CountriesTable::getCountries();
 
@@ -294,7 +297,7 @@ class Home extends My_Controller {
         $url = UrlsTable::getInstance()->findOneBy('url_original', URL_PREFIX_SHOWROOMS, Doctrine_Core::HYDRATE_ARRAY);
 
         $this->data['page_title'] = $url['url_page_title'];
-        
+
         $this->data['showrooms'] = ShowroomsLocationsTable::getAllShowroomsLocations();
 
         $this->data['active_showrooms'] = 'active';
@@ -339,7 +342,7 @@ class Home extends My_Controller {
             send_email($email, 'Become an Agent Form', $body);
 
             $this->session->set_flashdata('msg', 'Data has been sent successfully!');
-            
+
             redirect(site_url('home/become_agent'));
         }
 

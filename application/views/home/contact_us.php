@@ -139,8 +139,7 @@
         <?php echo lang('contact_us_address'); ?>
     </div>
     <div style="margin-top: 15px;">
-        <p>To see our worldwide distributors <a href="<?php echo site_url('home/worldwide'); ?>" class="link">click here</a></p>
-        <p>To see our Egypt Showrooms locations <a href="<?php echo site_url('home/showrooms'); ?>" class="link">click here</a></p>
+        <?php echo $page_content ?>
     </div>
 </div>
 <div id="insert">
