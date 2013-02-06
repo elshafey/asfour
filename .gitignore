@@ -4,3 +4,4 @@ uploads
 application/config/config.local.php
 ckfinder/userfiles/
 nbproject/
+application/config/auto_routes.php

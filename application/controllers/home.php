@@ -230,11 +230,7 @@ class Home extends My_Controller {
     }
 
     function press_release() {
-        $this->data['page_title'] = 'Press Release';
-        $this->data['news'] = NewsDetailsTable::gelAllNews(2);
-        $this->data['press_release'] = 'active';
-        $this->template->write_view('content', 'home/media_center', $this->data, FALSE);
-        $this->template->render();
+        $this->media_center('press_release');
     }
 
     function media_contacts() {
