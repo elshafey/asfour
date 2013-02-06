@@ -54,7 +54,7 @@
                 sortorder: "desc",
                 loadonce: true
             });
-            jQuery("#list2").jqGrid('navGrid','#pager2',{edit:false,add:false,del:false});
+            jQuery("#list2").jqGrid('navGrid','#pager2',{edit:false,add:false,del:false,search:false});
             var mydata = <?php echo $tabs_json ?>;
             for(var i=0;i<=mydata.length;i++) 
                 jQuery("#list2").jqGrid('addRowData',i+1,mydata[i]);
@@ -93,7 +93,7 @@
                 sortorder: "desc",
                 loadonce: true
             });
-            jQuery("#list3").jqGrid('navGrid','#pager3',{edit:false,add:false,del:false});
+            jQuery("#list3").jqGrid('navGrid','#pager3',{edit:false,add:false,del:false,search:false});
             var mydata = <?php echo $pdfs_json ?>;
             for(var i=0;i<=mydata.length;i++) 
                 jQuery("#list3").jqGrid('addRowData',i+1,mydata[i]);

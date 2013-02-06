@@ -9,7 +9,7 @@
     <span class="separator"></span>
     <a href="<?php echo site_url('home/press_release');?>" class="<?php echo isset($press_release) ? $press_release: ''; ?>">Press Releases</a>
     <span class="separator"></span>
-    <a href="">Medica Contacts</a>
+<!--    <a href="">Medica Contacts</a>-->
 </div>
 <div class="clear"></div>
 

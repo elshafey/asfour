@@ -11,6 +11,8 @@
  */
 /**
  * @property CI_Session $session
+ * @property CI_URI     $uri
+ * 
  */
 class My_Controller extends CI_Controller {
     
@@ -29,6 +31,20 @@ class My_Controller extends CI_Controller {
             $this->config->load('config.local');
         }
         
+        if (
+                $this->uri->segment(1)=='admin'
+                &&
+                $this->uri->rsegment(1)!='home'
+                &&
+                $this->uri->rsegment(1)!='login'
+                ) {
+            if (!$this->session->userdata('is_login')) {
+                
+                    redirect('admin/login');
+                
+                exit;
+            }
+        }
         set_locale();
         //Local settings override permanent settings always if found.
 

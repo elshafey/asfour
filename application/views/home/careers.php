@@ -3,6 +3,7 @@
     <h1 class="left_title">
         <?php echo $page_title ?>
     </h1>
+    <?php if($jobs){ ?>
     <?php foreach ($jobs as $job) { ?>
         <?php $url = site_url() . get_routed_url(URL_PREFIX_CAREER . $job['job_id']); ?>
         <div class="news-title"><?php echo $job['JobDetails'][0]['job_title']; ?></div>
@@ -12,4 +13,9 @@
         </p>
         <div class="news-separator"></div>
     <?php } ?>
+    <?php }else{ ?>
+        <div class="news-section">
+            <?php echo lang('careers_home_no_jobs') ?>
+        </div>
+    <?php }?>
 </div>

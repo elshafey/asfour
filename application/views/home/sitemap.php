@@ -29,7 +29,7 @@
         <li><a href="<?php echo site_url('home/worldwide'); ?>">ASFOUR WORLDWIDE</a></li>
         <li><a href="<?php echo site_url('home/media_center'); ?>">MEDIA CENTER</a></li>
         <li><a href="<?php echo site_url('home/faq'); ?>">FAQs</a></li>
-        <li><a href="<?php echo site_url('home/customer_services'); ?>">CUSTOMER SERVICE</a></li>
+<!--        <li><a href="<?php echo site_url('home/customer_services'); ?>">CUSTOMER SERVICE</a></li>-->
         <li><a href="<?php echo site_url('home/contact_us'); ?>">CONTACT US</a></li>
         <li><a href="<?php echo site_url('home/media_center'); ?>">NEWS</a></li>
         <li><a href="<?php echo site_url('home/careers'); ?>">CAREERS</a></li>

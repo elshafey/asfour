@@ -23,4 +23,6 @@ $lang['careers_form_order'] ='Job order';
 $lang['careers_form_active'] ='Job is Active?';
 
 $lang['careers_form_location']='Job location';
+
+$lang['careers_home_no_jobs']='No jobs are available right now';
 ?>
