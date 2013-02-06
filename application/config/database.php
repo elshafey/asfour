@@ -47,10 +47,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'asfourcorporate.db.6322300.hostedresource.com';
-$db['default']['username'] = 'asfourcorporate';
-$db['default']['password'] = 'Dominos@1';
-$db['default']['database'] = 'asfourcorporate';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'asfour';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
