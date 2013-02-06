@@ -68,7 +68,7 @@ function more_less_str($str){
             $lessed=implode(' ',$arr);
         }
     }
-    $lessed=(strlen($str)==strlen($lessed))? $lessed:$lessed.' <span class="see_more">[...More]</span>';
+    $lessed=(count(explode(' ',trim($str)))<=count(explode(' ',trim($lessed))))? $lessed:$lessed.' <span class="see_more">[...More]</span>';
     return
     '<div class="lessed">'.$lessed.'</div>'
     .'<div class="mored"  style="display:none">'.implode('<br>', $lines).' <span class="see_less">[...Less]</span></div>'    
