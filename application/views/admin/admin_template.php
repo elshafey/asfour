@@ -40,6 +40,7 @@ if (isset($page_header)) {
                 <div class="clear"></div>
                 <div class="menu">
                     <a href="<?php echo site_url('admin/about-us') ?>">About Us</a>|<a href="<?php echo site_url('admin/product') ?>">Products</a>|<a href="<?php echo site_url('admin/asfour-quality') ?>">Quality</a>|<a href="<?php echo site_url('admin/worldwide') ?>">Worldwide</a>|<a href="<?php echo site_url('admin/faq') ?>">FAQs</a>|<a href="<?php echo site_url('admin/feedback') ?>">Customer Service</a>|<a href="<?php echo site_url('admin/contact-us') ?>">Contact Us</a>|<a href="<?php echo site_url('admin/page/showrooms') ?>">showrooms</a>|<a href="<?php echo site_url('admin/banner') ?>">Banners</a>|<a href="<?php echo site_url('admin/news') ?>">News & Press Releases</a>|<a href="<?php echo site_url('admin/careers') ?>">Careers</a>|<a href="<?php echo site_url('admin/privacy-statement') ?>">Privacy Statement</a>
+                    <span style="float: right"><a href="<?php echo site_url('admin/login/logout') ?>" >Logout</a></span>
                 </div>
             </div>
 

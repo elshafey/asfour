@@ -38,6 +38,7 @@ class Login extends My_Controller{
     
     public function logout(){
         $this->session->sess_destroy();
+        redirect('/admin');
     }
 }
 
