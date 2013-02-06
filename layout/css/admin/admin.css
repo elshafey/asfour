@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border: none;
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #707070;
+}
+a{
+    text-decoration: none;
+}
+
+#wrapper{
+    width: 962px;
+    margin: 0 auto;
+}
+
+#header{
+    margin-bottom: 20px;	
+    margin-top: 12px;
+}
+
+#header .logo{
+    background-image: url(../../images/admin/logo.png);
+    background-repeat: no-repeat;
+    width: 114px;
+    height: 75px;
+    display: block;
+    float: left;	
+}
+
+#header .header_separator{
+    float: left;
+    height: 60px;
+    width: 1px;
+    border-left: 1px dashed #cccccc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#header .header_title{
+    font-size: 22px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#header .menu{
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#header .menu a{
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #AFAFAF;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+#header .menu a:hover{
+    color: #38b7d2;
+}
+
+#content{
+    margin-top: 50px;
+}
+
+#content .home-btn{
+    background-image: url(../../images/admin/home.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+#content .home-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .products-btn{
+    background-image: url(../../images/admin/products.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+#content .home-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .quality-btn{
+    background-image: url(../../images/admin/asfour_quality.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+#content .quality-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .worldwide-btn{
+    background-image: url(../../images/admin/asfour_worldwide.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+#content .worldwide-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .media-center-btn{
+    background-image: url(../../images/admin/media_center.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+#content .media-center-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .faq-btn{
+    background-image: url(../../images/admin/faqs.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#content .faq-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .customer-service-btn{
+    background-image: url(../../images/admin/customer_services.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#content .customer-service-btn:hover{
+    background-position: 0px -160px;
+}
+
+#content .contact-us-btn{
+    background-image: url(../../images/admin/contact_us.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 160px;
+    height: 160px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#content .contact-us-btn:hover{
+    background-position: 0px -160px;
+}
+
+#footer{
+    margin-top: 30px;
+    color: #939292;
+    font-size: 10px;
+    text-align: center;
+}
+
+.clear{
+    clear: both;
+    height: 5px;	
+}
+
+.grid_center{
+    text-align: center!important;
+}
+.grid_center div{
+    /*    padding: 10px;*/
+}
+.order_change{
+    float: left;
+    height: 100%;
+    margin-top: 7px;
+    text-align: center;
+    width: 70%;
+}
+.arrow{
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 118% auto;
+    float: right;
+    height: 30px;
+    width: 25px;
+}
+.arrow_down{
+    background-image: url("../../images/arrow_down.png");
+
+}
+.arrow_up{
+    background-image: url("../../images/arrow_up.png");
+
+}
+
+.section_title {
+    background-image: url("../../images/admin/section_title_bg.png");
+    background-repeat: repeat-x;
+    border: 1px solid #EBEBEB;
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 4px;
+}
+li{
+    margin-top: 8px;
+}
+.images_grid{
+
+}
+.images_grid tbody tr{
+    /*    border-bottom: solid #707070 1px;*/
+}
+.image_preview img{
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.images_grid tbody td{
+    /*    border-bottom: solid #707070 1px;   */
+}
+.multiple_select{
+    height: 83px;
+}
+.arrows{
+    float: right;
+    width: 20%;
+}
+.empty_arrow{
+    float: right;
+    height: 8px;
+    width: 100%;
+}
+.manage_countries{
+    float: right;
+    margin-right: 52px;
+}
+.country_name{
+    text-align: left;
+}
+.tbl_header{
+    color: #38b7d2;
+}

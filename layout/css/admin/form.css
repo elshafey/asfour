@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+form ul li{
+	margin-bottom:10px;	
+}
+
+form label{
+	width: 170px;
+	text-align: right;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 3px;
+}
+
+.txtbox{
+	border: 1px solid #CCC;
+	height: 20px;
+	width: 250px;
+	padding: 2px;
+}
+
+textarea{
+	border: 1px solid #CCC;
+	height: 60px;
+	width: 350px;
+	padding: 2px;
+}
+
+select{
+	padding: 1px;
+	border: 1px solid #CCC;
+	height: 24px;
+	width: 250px;
+}
+
+.star{
+    color: red;
+}
+.frm_error_msg{
+    color: red;
+}
+.btns{
+    margin-left: 170px;
+}
+.thumb_div{
+/*    background-position: right center;*/
+    background-repeat: no-repeat;
+    background-size: auto 100% ;
+    float: right;
+    height: 35px;
+    margin-right: 311px;
+    width: 100px;
+}
+.image_order{
+    padding-right: 58px;
+    text-align: center;
+}
+table{
+    text-align: center;
+}
+
+input[type="submit"],input[type="button"]{
+    border: 1px solid #C4C4C4;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    color: #444;
+}
