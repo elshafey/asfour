@@ -29,7 +29,7 @@ class News extends My_Controller {
                     $newsDetail = Details::getDetail('NewsDetails', 'news_id', $value['news_id'], $code);
                     $responce[$key]["news_title_$code"] = '<a href="' . site_url('admin/news/edit/' . $value['news_id']) . '">' . $newsDetail[0]['news_title'] . '</a>';
                 }
-                $responce[$key]["news_created_at"] = $value['news_created_at'];
+                $responce[$key]["news_created_at"] = substr($value['news_created_at'],0,10);
                 $responce[$key]["news_is_active"] = active_icon($value['news_is_active'], 'news', 'article', $value['news_id']);
                 $news_type = 'News';
                 if ($newsDetail[0]['news_type'] == 2) {
@@ -93,7 +93,8 @@ class News extends My_Controller {
             $this->session->set_flashdata("message", $message);
             redirect('admin/news/');
         }
-
+        $this->template->add_css("layout/css/jquery-ui.css");
+        $this->template->add_js("layout/js/jquery/jquery-ui.min.js");
         $this->template->write_view('content', 'admin/news/form', $this->data, FALSE);
         $this->template->render();
     }
@@ -114,6 +115,8 @@ class News extends My_Controller {
             $this->session->set_flashdata("message", $message);
             redirect('admin/news');
         }
+        $this->template->add_css("layout/css/grid/jquery-ui-1.8.2.custom.css");
+        $this->template->add_js("layout/js/jquery/jquery-ui.min.js");
         $this->template->write_view('content', 'admin/news/form', $this->data, FALSE);
         $this->template->render();
     }

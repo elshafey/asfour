@@ -42,6 +42,26 @@ class Pages extends BasePages {
         return FALSE;
     }
     
+    public function processContentForm() {
+        if ($_POST && $this->validateContentForm()) {
+            
+            foreach (get_lang_list() as $key => $lang) {
+                $language = LanguagesTable::getLanguage($key);
+                $pageDetails = PageDetailsTable::getInstance()
+                        ->findBySql('page_id =? AND lang_id=?', array($this->page_id, $language['lang_id']));
+
+                $pageDetail = $pageDetails[0];
+                $pageDetail->page_id = $this->page_id;
+                $pageDetail->page_content = $_POST['page_content_' . $key];
+                $pageDetail->lang_id = $language['lang_id'];
+                $pageDetail->save();
+            }
+            return true;
+        }
+
+        return FALSE;
+    }
+    
     public function populateForm($img_add=false) {
         if (!$_POST||$img_add) {
             foreach (get_lang_list() as $key => $lang) {
@@ -56,6 +76,23 @@ class Pages extends BasePages {
             }
             $_POST['page_banner']=  $this->page_banner;
             populate_url(URL_PREFIX_PAGE.$this->slug);
+            $this->CI->process_form = false;
+            
+            $this->validateContentForm();
+        }
+    }
+    
+    public function populateContentForm($img_add=false) {
+        if (!$_POST||$img_add) {
+            foreach (get_lang_list() as $key => $lang) {
+                $language = LanguagesTable::getLanguage($key);
+                $pageDetails = PageDetailsTable::getInstance()->
+                        findBySql(
+                        'page_id =? AND lang_id=?', array($this->page_id,
+                    $language['lang_id']), Doctrine_Core::HYDRATE_ARRAY);
+
+                $_POST["page_content_$key"] = $pageDetails[0]['page_content'];
+            }
             $this->CI->process_form = false;
             
             $this->validateForm();
@@ -74,6 +111,15 @@ class Pages extends BasePages {
         }else{
             validte_url();
         }
+        return $this->CI->form_validation->run();
+    }
+    private function validateContentForm() {
+
+        $this->CI->form_validation->set_error_delimiters('<span class="frm_error_msg">', '</span>');
+        foreach (get_lang_list() as $key => $lang) {
+            $this->CI->form_validation->set_rules("page_content_$key", "", "required");
+        }
+        
         return $this->CI->form_validation->run();
     }
 

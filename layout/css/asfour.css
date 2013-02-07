@@ -494,10 +494,10 @@ select{
 }
 
 select{
-	padding: 1px;
-	border: 1px solid #CCC;
-	height: 24px;
-	width: 250px;
+    padding: 1px;
+    border: 1px solid #CCC;
+    height: 24px;
+    width: 250px;
 }
 
 .inside-right .about_us_main_img{
@@ -573,4 +573,7 @@ select{
 .news-section{
     width: 700px;
     text-align: justify;
+}
+select.error,input.error,textarea.error{
+    border: 1px solid red;
 }

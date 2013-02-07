@@ -364,6 +364,8 @@ class Home extends My_Controller {
         $this->data['page_title'] = 'Careers';
 
         if (!$job_id) {
+            $page_data = PagesTable::getPageData('careers');
+            $this->data['page_content'] = $page_data['content'];
             $this->data['jobs'] = JobsTable::getJobs(get_language_id(), true, true);
             $this->template->write_view('content', 'home/careers', $this->data, FALSE);
         } else {

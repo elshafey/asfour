@@ -31,8 +31,9 @@ function CheckAuthentication()
 	// forget to add session_start() at the top of this file.
 
     
-	session_start();
-	return isset($_SESSION['IsAuthorized'])&&$_SESSION['IsAuthorized'];
+//	session_start();
+//	return isset($_SESSION['IsAuthorized'])&&$_SESSION['IsAuthorized'];
+    return true;
 }
 
 // LicenseKey : Paste your license key here. If left blank, CKFinder will be
@@ -61,7 +62,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/ckfinder/userfiles/';
+$baseUrl = '/asfour/ckfinder/userfiles/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the

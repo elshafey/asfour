@@ -23,7 +23,7 @@ class Articles extends BaseArticles
         if ($_POST && $this->validateForm()) {
             $this->news_is_active = $_POST['news_is_active'];
             if(!$this->news_id)
-                $this->news_created_at=  date('YmdHms');                
+                $this->news_created_at=  $_POST['news_created_at'];          
                 
             $this->save();
             save_url(URL_PREFIX_NEWS.$this->news_id);
@@ -61,6 +61,7 @@ class Articles extends BaseArticles
         }
         $this->CI->form_validation->set_rules("news_is_active", "", "xss_clean");
         $this->CI->form_validation->set_rules("news_type", "", "xss_clean");
+        $this->CI->form_validation->set_rules("news_created_at", "", "required|xss_clean");
 
         return $this->CI->form_validation->run();
     }
@@ -79,6 +80,7 @@ class Articles extends BaseArticles
             }
             populate_url(URL_PREFIX_NEWS.$this->news_id);
             $_POST["news_is_active"] = $this->news_is_active;
+            $_POST["news_created_at"] = substr($this->news_created_at,0,10);
             $_POST["news_type"] = $newsDetail[0]['news_type'];
             $this->CI->process_form = false;
             $this->validateForm();

@@ -2,9 +2,6 @@
     .inside-banner{
         background-image: URL(<?php echo get_static_url($banner_path);?>)!important;
     }
-    select.error,input.error,textarea.error{
-        border: 1px solid red;
-    }
 </style>
 <script type="text/javascript">
     jQuery.validator.addMethod("selectNone",function(value, element) {

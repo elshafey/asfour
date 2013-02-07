@@ -15,7 +15,14 @@
             
         </li>          
         <?php } ?>
+        
         <?php print_url_info(); ?>
+        <li>
+            <?php echo lang('news_form_created_at','news_created_at') ?>
+            <input type="text" readonly="readonly" class="txtbox" name="<?php echo 'news_created_at' ?>" id="<?php echo 'news_created_at' ?>" value="<?php echo set_value('news_created_at') ?>" />
+            <span class="star">*</span>
+            <?php echo form_error("news_created_at"); ?>
+        </li>
         <li>
             <?php echo lang("news_form_active",'news_is_active'); ?>
             <input name="news_is_active" id="news_is_active" value="<?php echo set_value("news_is_active", "0") ?>" <?php echo set_checkbox("news_is_active", "1") ?>  type="checkbox" />
@@ -31,3 +38,9 @@
         </li>
     </ul>
 </form>
+<script>
+    $('#news_created_at').datepicker(
+    { 
+        dateFormat: 'yy-mm-dd'
+    });
+</script>

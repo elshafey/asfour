@@ -3,7 +3,6 @@
         background-image: URL(<?php echo get_static_url($banner_path);?>)!important;
     }
     .see_more,.see_less{
-        color:#4472c4;
         cursor: pointer;
     }
 </style>

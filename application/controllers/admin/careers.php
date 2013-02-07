@@ -12,13 +12,13 @@ if (!defined('BASEPATH'))
  */
 
 class Careers extends My_Controller {
-    
+
     function __construct() {
         parent::__construct();
         $this->template->set_template('admin_template');
     }
-    
-    public function index(){
+
+    public function index() {
         $jobs = JobsTable::getJobs();
 
 //        pre_print($jobs);
@@ -31,7 +31,7 @@ class Careers extends My_Controller {
                     $jobDetail = JobDetailsTable::getJobDetail($value['job_id'], $code);
                     $responce[$key]["job_title_$code"] = '<a href="' . site_url('admin/careers/edit/' . $value['job_id']) . '">' . $jobDetail[0]['job_title'] . '</a>';
                 }
-                $responce[$key]["job_order"] = order_icon($value['job_order'],'careers','job',$value['job_id']);
+                $responce[$key]["job_order"] = order_icon($value['job_order'], 'careers', 'job', $value['job_id']);
 //                $responce[$key]["job_order"] = order_icon($value['job_order'],'careers','job',$value['job_id']);
                 $responce[$key]["job_is_active"] = active_icon($value['job_is_active'], 'careers', 'job', $value['job_id']);
                 $responce[$key]['job_edit'] = '<a href="' . site_url('admin/careers/edit/' . $value['job_id']) . '">' . lang('global_edit') . '</a>';
@@ -40,15 +40,22 @@ class Careers extends My_Controller {
         }
 //        pre_print($responce);
 //        
+        $this->lang->load('page');
+        $page = PagesTable::getInstance()->findOneBy('slug', 'careers');
+        $page->populateContentForm();
+        if ($this->process_form){    
+            $page->processContentForm();
+        }
+
         $this->data['json'] = json_encode($responce);
-        $this->data['page_title']=lang('careers_page_title');
+        $this->data['page_title'] = lang('careers_page_title');
         load_grid_files();
         $this->template->write_view('content', 'admin/careers/index', $this->data, FALSE);
         $this->template->render();
     }
-    
-    public function create(){
-        
+
+    public function create() {
+
         $this->data['page_title'] = lang('careers_form_create_page_title');
 
         $job = new Jobs();
@@ -65,7 +72,7 @@ class Careers extends My_Controller {
         $this->template->write_view('content', 'admin/careers/form', $this->data, FALSE);
         $this->template->render();
     }
-    
+
     public function edit($job_id) {
         $jobs = $this->check($job_id);
         $jobs->populateForm();
@@ -85,7 +92,7 @@ class Careers extends My_Controller {
         $this->template->write_view('content', 'admin/careers/form', $this->data, FALSE);
         $this->template->render();
     }
-    
+
     /**
      *
      * @param int $faqs_id
@@ -130,7 +137,7 @@ class Careers extends My_Controller {
         $this->session->set_flashdata("message", $message);
         redirect('admin/careers');
     }
-    
+
     public function orderup($model, $id, $order) {
         $this->change_order($model, $id, $order - 1);
     }
@@ -138,6 +145,7 @@ class Careers extends My_Controller {
     public function orderdown($model, $id, $order) {
         $this->change_order($model, $id, $order + 1);
     }
+
     private function change_order($model, $id, $new_order) {
 
         $obj = JobsTable::getInstance()
@@ -155,6 +163,7 @@ class Careers extends My_Controller {
 
         redirect('admin/careers');
     }
+
     public function delete($job_id) {
         $jobs = $this->check($job_id);
         $jobs->delete();
@@ -168,4 +177,5 @@ class Careers extends My_Controller {
 
         redirect('admin/careers');
     }
+
 }
