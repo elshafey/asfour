@@ -25,6 +25,10 @@ class CountriesTable extends Doctrine_Table
                 ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY);
         if($for_worldwide){
             $q->innerJoin('c.Agents');
+        }else{
+            $q->leftJoin('c.Agents a')
+                    ->groupBy('c.country_id')
+                    ->addSelect('count(a.agent_id)');
         }
         return $q->execute();
     }

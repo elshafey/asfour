@@ -206,6 +206,7 @@ class Worldwide extends My_Controller {
             redirect('admin/worldwide/countries');
         }
         $this->data['countries']=  CountriesTable::getCountries();
+        
         $this->data['page_title'] = lang('worldwide_manage_countries_page_title');
         
         $this->template->write_view('content', 'admin/worldwide/countries', $this->data, FALSE);

@@ -23,5 +23,6 @@ $lang['worlwide_add_new_country_name'] ='Country name';
 $lang['worldwide_add_country_logo_path'] ='Select country logo';
 $lang['country_grid_name'] ='Country name';
 $lang['country_grid_logo'] ='Country logo';
+$lang['country_grid_agents_count'] ='Country agents';
 
 ?>

@@ -26,7 +26,9 @@
                     <thead>
                         <tr>
                             <td class="country_name tbl_header" width="180"><?php echo lang('country_grid_name') ?></td>
+                            <td class="country_name tbl_header" width="180"><?php echo lang('country_grid_agents_count') ?></td>
                             <td class="country_name tbl_header" width="180"><?php echo lang('country_grid_logo') ?></td>
+                            
                             <td width="180">&nbsp;</td>
                             <td width="180">&nbsp;</td>
                         </tr>
@@ -36,6 +38,9 @@
                             <tr>
                                 <td class="country_name">
                                     <?php echo $country['country_name'] ?>
+                                </td>
+                                <td class="country_name">
+                                    <?php echo $country['count'] ?>
                                 </td>
                                 <td class="country_name">
                                     <img height="20" alt="<?php echo $country['country_name'] ?> logo" src="<?php echo get_static_url(page_thumb($country['country_logo'])) ?>">
