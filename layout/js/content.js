@@ -29,3 +29,34 @@ function site_url(controller){
     return url;
     
 }
+$(document).ready(
+    function(){
+        $('#menu a,#menu span').not('.sub-menu li a').hover(
+            function(){
+                if($('.products').not(':hover')&&$('.sub-menu').is(':visible')){
+                    $('.sub-menu').fadeOut();
+                }
+            },
+            function(){
+                if($('.products').not(':hover')&&$('.sub-menu').is(':visible')){
+                    $('.sub-menu').fadeOut();
+                }
+            }
+            );
+        $('.products').hover(
+            function(){
+                if($('.sub-menu').not(':visible'))
+                    $('.sub-menu').fadeIn();
+                    
+                $('.sub-menu').hover(function(){
+                    if($('.sub-menu').not(':visible'))
+                        $('.sub-menu').fadeIn();
+                }, function(e){
+                    $('.sub-menu').fadeOut();
+                });
+            },function(e){
+                if(parseInt(e.pageY) < 120){
+                    $('.sub-menu').fadeOut();
+                };
+            })
+    })

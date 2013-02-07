@@ -11,39 +11,6 @@
         <script src="<?php echo base_url(); ?>layout/js/content.js" type="text/javascript"></script>
         <?php echo $_scripts ?>
         <?php // $menuProducts= ProductsTable::getProducts(get_language_id(), true, true) ?>
-        <script type="text/javascript">
-            $(document).ready(
-            function(){
-                $('#menu a,#menu span').not('.sub-menu li a').hover(
-                function(){
-                   if($('.products').not(':hover')&&$('.sub-menu').is(':visible')){
-                       $('.sub-menu').fadeOut();
-                   }
-                },
-                function(){
-                   if($('.products').not(':hover')&&$('.sub-menu').is(':visible')){
-                       $('.sub-menu').fadeOut();
-                   }
-                }
-            );
-                $('.products').hover(
-                function(){
-                    if($('.sub-menu').not(':visible'))
-                        $('.sub-menu').fadeIn();
-                    
-                    $('.sub-menu').hover(function(){
-                        if($('.sub-menu').not(':visible'))
-                            $('.sub-menu').fadeIn();
-                    }, function(e){
-                        $('.sub-menu').fadeOut();
-                    });
-                },function(e){
-                    if(parseInt(e.pageY) < 120){
-                        $('.sub-menu').fadeOut();
-                    };
-                })
-            })
-        </script>
     </head>
     <body>
         <div id="wrapper">
