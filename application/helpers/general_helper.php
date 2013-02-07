@@ -68,10 +68,10 @@ function more_less_str($str){
             $lessed=implode(' ',$arr);
         }
     }
-    $lessed=(count(explode(' ',trim($str)))<=count(explode(' ',trim($lessed))))? $lessed:$lessed.' <span class="see_more link">... Read more</span>';
+    $lessed=(count(explode(' ',trim($str)))<=count(explode(' ',trim($lessed))))? $lessed:$lessed.' <span class="see_more link">...'.lang('global_more').'</span>';
     return
     '<div class="lessed">'.$lessed.'</div>'
-    .'<div class="mored"  style="display:none">'.implode('<br>', $lines).' <span class="see_less">[...Less]</span></div>'    
+    .'<div class="mored"  style="display:none">'.implode('<br>', $lines).' <span class="see_less">...Less</span></div>'    
         ;    
 //    pre_print($lines);
 }

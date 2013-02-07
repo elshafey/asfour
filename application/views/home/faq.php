@@ -5,6 +5,9 @@
     .see_more,.see_less{
         cursor: pointer;
     }
+    .see_less{
+        color: #2CB2CF;
+    }
 </style>
 <div class="inside-banner"></div>
 <?php if($formatted=='formatted'){ ?>

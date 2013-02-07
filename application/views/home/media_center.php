@@ -21,7 +21,7 @@
         <?php $url = site_url() . get_routed_url(URL_PREFIX_NEWS . $item['news_id']); ?>
         <div class="news-title"><?php echo $item['news_title']; ?></div>
         <p>
-            <?php echo sub_string_from_start($item['news_description'], 200) . anchor($url, 'Read more', 'class="link"'); ?>
+            <?php echo sub_string_from_start($item['news_description'], 200) . anchor($url, lang('global_more'), 'class="link"'); ?>
         </p>
         <div class="news-separator"></div>
     <?php } ?>
