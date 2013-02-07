@@ -39,9 +39,11 @@
     <ul class="news-items">
         <?php foreach ($latest_news as $news) { ?>
         <li style="float: left">
-                <div class="news_title"><?php echo sub_string_from_start($news['NewsDetails'][0]['news_title'], 20) ?></div>
-                <?php echo sub_string_from_start($news['NewsDetails'][0]['news_description'], 80) ?>
-                <a class="home-more-link" style="float: none" href="<?php echo site_url() . get_routed_url(URL_PREFIX_NEWS . $news['news_id']); ?>"><?php echo lang('global_more') ?></a>
+                <div class="news_title">
+                    <?php echo sub_string_from_start($news['NewsDetails'][0]['news_title'], 100) ?>
+                    <a class="home-more-link" style="float: none" href="<?php echo site_url() . get_routed_url(URL_PREFIX_NEWS . $news['news_id']); ?>"><?php echo lang('global_more') ?></a>
+                </div>
+                
             </li>
         <?php } ?>
 
