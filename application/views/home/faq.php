@@ -32,7 +32,7 @@
     </script>
 </div>
 <?php }else{ ?>
-<div class="inside-left" style="width: 90%">
+<div class="news-section">
     <h1 class="left_title"><?php echo $page_title ?></h1>
     <div id="accordion">
         <?php foreach ($faqs as $key => $value) { ?>
