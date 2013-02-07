@@ -16,9 +16,9 @@
 <p class="worldwide-txt">
     Asfour Crystal enjoys a global presence in more than 90 countries across the entire globe. We choose our partners carefully and ensure our representatives, agents and distributors understand the value of the Asfour name and importance of representing it in only the finest and most accommodating manner.
 </p>
-<div class="become-agent">
+<!--<div class="become-agent">
     Become an agent? <a href="<?php echo site_url('home/become_agent'); ?>" class="link">click here</a>        
-</div>
+</div>-->
 <div style="width: 254px;float: right;margin-top: 15px;">
     -To know our distributres for Crystal Parts, please send email to: <a href="mailto: cfc@asfourcrystal.com" style="color: #2CB2CF;">cfc@asfourcrystal.com</a> <br /><br />
     -To know our distributres for Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
