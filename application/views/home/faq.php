@@ -4,6 +4,7 @@
     }
     .see_more,.see_less{
         cursor: pointer;
+        text-decoration: underline;
     }
     .see_less{
         color: #2CB2CF;
