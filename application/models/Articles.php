@@ -22,8 +22,8 @@ class Articles extends BaseArticles
     public function processForm() {
         if ($_POST && $this->validateForm()) {
             $this->news_is_active = $_POST['news_is_active'];
-            if(!$this->news_id)
-                $this->news_created_at=  $_POST['news_created_at'];          
+            
+            $this->news_created_at=  $_POST['news_created_at'];          
                 
             $this->save();
             save_url(URL_PREFIX_NEWS.$this->news_id);

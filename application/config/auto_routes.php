@@ -38,3 +38,4 @@ $route["Crystal Parts"]        ="home/product/9";
 $route["Crystal Applications"]        ="home/product/10";
 $route["home/showrooms/"]        ="home/showrooms/";
 $route["privacy-statement"]        ="home/page/privacy-statement";
+$route["home/page/careers"]        ="home/page/careers";
