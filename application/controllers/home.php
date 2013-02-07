@@ -111,7 +111,7 @@ class Home extends My_Controller {
             $this->data['prod_imagges'] = ProductImagesTable::getImages($prod_id);
         $this->data['prod_tabs'] = ProductTabsTable::getTabs($prod_id, get_language_id(), true, true);
         $this->data['prod_id'] = $prod_id;
-        if (!isset($this->data['pdfs']) || !$this->data['pdfs'])
+        if (!isset($this->data['pdfs']))
             $this->data['pdfs'] = ProductPdfsTable::getAllProductPDFs($prod_id, get_language_id());
 //        pre_print($this->data['pdfs']);
 

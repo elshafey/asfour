@@ -305,7 +305,7 @@ Force ASCII names for files and folders.
 If enabled, characters with diactric marks, like å, ä, ö, ć, č, đ, š
 will be automatically converted to ASCII letters.
 */
-$config['ForceAscii'] = false;
+$config['ForceAscii'] = true;
 
 /*
 Send files using X-Sendfile module

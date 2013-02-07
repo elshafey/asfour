@@ -39,7 +39,7 @@
         foreach ($pdfs as $pdf) {
             ?>
             <div class="icons icon_left">
-                <span class="pdf-icon"></span> <a href="<?php echo 'http://www.happytimes.com'. $pdf['pdf_path'];?>"><?php echo $pdf['PdfDetails'][0]['pdf_title']?></a>        
+                <span class="pdf-icon"></span> <a target="_blank" href="<?php echo get_static_url(($pdf['pdf_path']));?>"><?php echo $pdf['PdfDetails'][0]['pdf_title']?></a>        
             </div>
         <?php
         }

@@ -234,4 +234,12 @@ function load_video_data() {
     $CI->form_validation->set_rules("video_img", "", "xss_clean");
     $CI->form_validation->set_rules("video_url", "", "xss_clean");
 }
-?>
+
+function get_encoded_url($path){
+    $exp=  explode('/', $path);
+//    pre_print($exp,false);
+    $exp[count($exp)-1]=  urlencode($exp[count($exp)-1]);
+//    pre_print($exp);
+    return implode('/', $exp);
+}
+    ?>
