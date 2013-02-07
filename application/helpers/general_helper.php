@@ -10,7 +10,7 @@ function load_common_data(){
 }
 
 function sub_string_from_start($string,$length){
-    return substr(strip_tags($string), 0,$length).((strlen($string)>$length)?'...':'');
+    return htmlspecialchars(substr(strip_tags($string), 0,$length).((strlen($string)>$length)?'...':''));
 }
 
 function get_product_images($prod_id,$limit){

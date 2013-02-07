@@ -12,7 +12,7 @@
             <div class="news-title"><?php echo $job['JobDetails'][0]['job_title']; ?></div>
             <span class="news-title"><?php echo lang('careers_form_job_code') ?>:</span><?php echo $job['job_code'] ?>
             <p style="margin-top: 10px;">
-                <?php echo sub_string_from_start($job['JobDetails'][0]['job_description'], 200) . anchor($url, 'Read more', 'class="link"'); ?>
+                <?php echo sub_string_from_start($job['JobDetails'][0]['job_description'], 200) . anchor($url, 'More', 'class="link"'); ?>
             </p>
             <div class="news-separator"></div>
         <?php } ?>
