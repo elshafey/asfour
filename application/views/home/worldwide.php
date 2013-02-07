@@ -1,6 +1,6 @@
 <style type="text/css">
     .inside-banner{
-        background-image: URL(<?php echo get_static_url($banner_path);?>)!important;
+        background-image: URL(<?php echo get_static_url($banner_path); ?>)!important;
     }
 </style>
 <div class="inside-banner"></div>
@@ -16,13 +16,15 @@
 <p class="worldwide-txt">
     Asfour Crystal enjoys a global presence in more than 90 countries across the entire globe. We choose our partners carefully and ensure our representatives, agents and distributors understand the value of the Asfour name and importance of representing it in only the finest and most accommodating manner.
 </p>
-<div class="become-agent">
-    More Information About...
+<div class="become-agent" style="width: 254px">
+    <p style="background-color: #cccccc" class="news-title">
+        More Information About...
+    </p>
 </div>
 <div style="width: 254px;float: right;margin-top: 15px;">
-    -To know our distributres for Crystal Parts, please send email to: <a href="mailto: cfc@asfourcrystal.com" style="color: #2CB2CF;">cfc@asfourcrystal.com</a> <br /><br />
-    -To know our distributres for Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
-    -To know our distributres for Crystal-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
+    -Distributres for Crystal Parts, please send email to: <a href="mailto: cfc@asfourcrystal.com" style="color: #2CB2CF;">cfc@asfourcrystal.com</a> <br /><br />
+    -Distributres for Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
+    -Distributres for Crystal-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
 </div>
 <div class="inside-left" style="width: 330px">
     <div class="countries">
@@ -36,24 +38,24 @@
             </select>
         </div>
     </div>
-<!--    <div style="margin-top: 20px;" >        
-        <div class="label"><?php echo lang('home_worldwide_product') ?></div>
-        <div id="products_list">
-            <select name="product_id" id="product_id" >
-                <option value=""><?php echo lang('global_select') ?></option>
-            </select>
-        </div>
-    </div>-->
-<!--    <div class="countries_mages" style="width:500px">
-        <?php foreach ($countries as $key => $country) { ?>
-            <div class="country_image" id="country_image_<?php echo $country['country_id'] ?>" style="display: none">
-                    <span style="color: #38B776;margin-bottom: 6px;"><?php echo $country['country_name'] ?></span>
-                                <div style="clear: both">
-                                    <img src="<?php echo base_url() . ($country['country_logo']) ?>">
-                                </div>
+    <!--    <div style="margin-top: 20px;" >        
+            <div class="label"><?php echo lang('home_worldwide_product') ?></div>
+            <div id="products_list">
+                <select name="product_id" id="product_id" >
+                    <option value=""><?php echo lang('global_select') ?></option>
+                </select>
             </div>
-        <?php } ?>
-    </div>-->
+        </div>-->
+    <!--    <div class="countries_mages" style="width:500px">
+    <?php foreach ($countries as $key => $country) { ?>
+                    <div class="country_image" id="country_image_<?php echo $country['country_id'] ?>" style="display: none">
+                            <span style="color: #38B776;margin-bottom: 6px;"><?php echo $country['country_name'] ?></span>
+                                        <div style="clear: both">
+                                            <img src="<?php echo base_url() . ($country['country_logo']) ?>">
+                                        </div>
+                    </div>
+    <?php } ?>
+        </div>-->
 </div>
 <div class="inside-right" style="width: 70%;margin-top: 20px">
 
@@ -69,7 +71,7 @@
                     if(data.length > 3){
                         $('.inside-right').html(data);
                     }else{
-                        $('.inside-right').html('Currently there is no agent in this <?php echo '<a href="'.(site_url('home/become_agent')).'">Click Here</a>' ?> to become an Agent');
+                        $('.inside-right').html('Currently there is no agent in this <?php echo '<a href="' . (site_url('home/become_agent')) . '">Click Here</a>' ?> to become an Agent');
                     }
                 })
             }            
