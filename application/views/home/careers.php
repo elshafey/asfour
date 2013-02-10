@@ -1,3 +1,8 @@
+<style type="text/css">
+    .inside-banner{
+        background-image: URL(<?php echo base_url().'layout/images/careers.jpg';?>)!important;
+    }
+</style>
 <div class="inside-banner"></div>
 <div class="news-section">
     <h1 class="left_title">
