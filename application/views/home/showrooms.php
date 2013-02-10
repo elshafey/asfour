@@ -1,6 +1,6 @@
 <style type="text/css">
     .inside-banner{
-        background-image: URL(<?php echo base_url() . 'layout/images/contact-us.jpg'; ?>)!important;
+        background-image: URL(<?php echo get_static_url($banner_path);?>)!important;
     }
 </style>
 <div class="inside-banner"></div>

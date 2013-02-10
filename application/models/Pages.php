@@ -44,7 +44,8 @@ class Pages extends BasePages {
     
     public function processContentForm() {
         if ($_POST && $this->validateContentForm()) {
-            
+            $this->page_banner=$_POST['page_banner'];
+            $this->save();
             foreach (get_lang_list() as $key => $lang) {
                 $language = LanguagesTable::getLanguage($key);
                 $pageDetails = PageDetailsTable::getInstance()
@@ -78,7 +79,7 @@ class Pages extends BasePages {
             populate_url(URL_PREFIX_PAGE.$this->slug);
             $this->CI->process_form = false;
             
-            $this->validateContentForm();
+            $this->validateForm();
         }
     }
     
@@ -93,9 +94,10 @@ class Pages extends BasePages {
 
                 $_POST["page_content_$key"] = $pageDetails[0]['page_content'];
             }
+            $_POST['page_banner']=  $this->page_banner;
             $this->CI->process_form = false;
             
-            $this->validateForm();
+            $this->validateContentForm();
         }
     }
     
@@ -119,7 +121,7 @@ class Pages extends BasePages {
         foreach (get_lang_list() as $key => $lang) {
             $this->CI->form_validation->set_rules("page_content_$key", "", "required");
         }
-        
+        $this->CI->form_validation->set_rules("page_banner", "", "required");
         return $this->CI->form_validation->run();
     }
 

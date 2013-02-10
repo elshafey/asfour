@@ -281,7 +281,7 @@ class Home extends My_Controller {
 
         $page_data = PagesTable::getPageData('contact-us');
         $this->data['page_content'] = $page_data['content'];
-        
+
         $this->data['page_title'] = 'Contact Us';
         $this->data['countries'] = CountriesTable::getCountries();
 
@@ -302,7 +302,7 @@ class Home extends My_Controller {
 
         $this->data['active_showrooms'] = 'active';
 
-//        $this->template->add_css('layout/js/google_map.js');
+        $this->data['banner_path'] = get_banner_bath("URL_PREFIX_CONTACT_US");
 
         $this->template->write_view('content', 'home/showrooms', $this->data, FALSE);
         $this->template->render();
@@ -363,8 +363,11 @@ class Home extends My_Controller {
         $this->lang->load('careers');
         $this->data['page_title'] = 'Careers';
 
+        $page_data = PagesTable::getPageData('careers');
+        $page = PagesTable::getInstance()->find($page_data['page_id']);
+        $this->data['banner_path'] = $page->page_banner;
         if (!$job_id) {
-            $page_data = PagesTable::getPageData('careers');
+
             $this->data['page_content'] = $page_data['content'];
             $this->data['jobs'] = JobsTable::getJobs(get_language_id(), true, true);
             $this->template->write_view('content', 'home/careers', $this->data, FALSE);
@@ -382,11 +385,12 @@ class Home extends My_Controller {
         $this->template->render();
     }
 
-    public function notfound(){
-        
+    public function notfound() {
+
         $this->template->write_view('content', 'home/notfound', $this->data, FALSE);
         $this->template->render();
     }
+
 }
 
 /* End of file: dashboard.php */
