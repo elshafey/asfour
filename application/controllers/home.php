@@ -382,6 +382,11 @@ class Home extends My_Controller {
         $this->template->render();
     }
 
+    public function notfound(){
+        
+        $this->template->write_view('content', 'home/notfound', $this->data, FALSE);
+        $this->template->render();
+    }
 }
 
 /* End of file: dashboard.php */
