@@ -18,13 +18,13 @@
 </p>
 <div class="become-agent" style="width: 254px">
     <p style="background-color: #cccccc" class="news-title">
-        For more Information About...
+        Additional contact information
     </p>
 </div>
 <div style="width: 254px;float: right;margin-top: 15px;">
-    Distributres for Crystal Parts, please send email to: <a href="mailto:  crystal.parts@asfourcrystal.com" style="color: #2CB2CF;"> crystal.parts@asfourcrystal.com</a> <br /><br />
-    Distributres for Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
-    Distributres for Crystal-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
+    Distributres of Crystal Parts, please send email to: <a href="mailto:  crystal.parts@asfourcrystal.com" style="color: #2CB2CF;"> crystal.parts@asfourcrystal.com</a> <br /><br />
+    Distributres of Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
+    Distributres of Crystal-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
 </div>
 <div class="inside-left" style="width: 330px">
     <div class="countries">
