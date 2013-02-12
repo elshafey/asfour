@@ -196,7 +196,7 @@ class Home extends My_Controller {
             $body .= '<p><strong>Message: </strong>' . $this->input->post('message') . '</p>';
             send_email($email, 'Customer Service Form', $body);
 
-            $this->session->set_flashdata('msg', 'Data has been sent successfully!');
+            $this->session->set_flashdata('msg', lang('home_form_submit_success'));
             redirect(site_url('customer-services'));
         }
 
@@ -275,7 +275,7 @@ class Home extends My_Controller {
             $body .= '<p><strong>Message: </strong>' . $this->input->post('message') . '</p>';
             send_email($email, 'Contact Us Form', $body);
 
-            $this->session->set_flashdata('msg', 'Data has been sent successfully!');
+            $this->session->set_flashdata('msg', lang('home_form_submit_success'));
             redirect(site_url('home/contact_us'));
         }
 
@@ -341,7 +341,7 @@ class Home extends My_Controller {
             $body .= '<p><strong>Message: </strong>' . $this->input->post('message') . '</p>';
             send_email($email, 'Become an Agent Form', $body);
 
-            $this->session->set_flashdata('msg', 'Data has been sent successfully!');
+            $this->session->set_flashdata('msg', lang('home_form_submit_success'));
 
             redirect(site_url('home/become_agent'));
         }

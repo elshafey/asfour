@@ -9,8 +9,11 @@ function load_common_data(){
     $CI->data['contact_us_title']=$pagesTitles['contact-us'];
 }
 
-function sub_string_from_start($string,$length){
-    return htmlspecialchars(substr(strip_tags($string), 0,$length).((strlen($string)>$length)?'...':''));
+function sub_string_from_start($string,$length,$htmlspaecialchars=false){
+    if($htmlspaecialchars)
+        return htmlspecialchars(substr(strip_tags($string), 0,$length).((strlen($string)>$length)?'...':''));
+    
+    return substr(strip_tags($string), 0,$length).((strlen($string)>$length)?'...':'');
 }
 
 function get_product_images($prod_id,$limit){

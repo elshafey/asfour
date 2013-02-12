@@ -21,14 +21,13 @@ class ShowroomsLocations extends BaseShowroomsLocations {
 
     public function addShowroomLocation(array $data) {
         if ($this->validateForm()) {
-            $s = new ShowroomsLocations();
-            $s->name = $data['name'];
-            $s->address = $data['address'];
-            $s->tel = $data['tel'];
-            $s->fax = $data['fax'];
-            $s->longitude = $data['longitude'];
-            $s->latitude = $data['latitude'];
-            $s->save();
+            $this->name = $data['name'];
+            $this->address = $data['address'];
+            $this->tel = $data['tel'];
+            $$thiss->fax = $data['fax'];
+            $this->longitude = $data['longitude'];
+            $this->latitude = $data['latitude'];
+            $this->save();
             return true;
         }
         return false;
@@ -39,12 +38,22 @@ class ShowroomsLocations extends BaseShowroomsLocations {
 
         $this->CI->form_validation->set_rules("name", "", "required|xss_clean");
         $this->CI->form_validation->set_rules("address", "", "required|xss_clean");
-        $this->CI->form_validation->set_rules("tel", "", "required|numeric|xss_clean");
-        $this->CI->form_validation->set_rules("fax", "", "required|numeric|xss_clean");
+        $this->CI->form_validation->set_rules("tel", "", "numeric|xss_clean");
+        $this->CI->form_validation->set_rules("fax", "", "numeric|xss_clean");
         $this->CI->form_validation->set_rules("longitude", "", "required|numeric|xss_clean");
         $this->CI->form_validation->set_rules("latitude", "", "required|numeric|xss_clean");
 
         return $this->CI->form_validation->run();
+    }
+    
+    public function populate(){
+        $_POST['name']=  $this->name;
+        $_POST['address']=  $this->address;
+        $_POST['tel']=  $this->tel;
+        $_POST['fax']=  $this->fax;
+        $_POST['longitude']=  $this->longitude;
+        $_POST['latitude']=  $this->latitude;
+        $this->validateForm();
     }
 
     public function deleteShowroom($id) {

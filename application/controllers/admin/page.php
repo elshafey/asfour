@@ -23,10 +23,10 @@ class Page extends My_Controller {
         if ($_POST && $_POST['action_name'] == 'add_image') {
             $this->add_image($page->page_id, $slug);
             $page->populateForm(true);
-        }else{
+        } else {
             $page->populateForm();
         }
-        
+
         $pageDetails = PageDetailsTable::getInstance()
                 ->findBySql('page_id =? AND lang_id=?', array($page->page_id, get_language_id())
                 , Doctrine_Core::HYDRATE_ARRAY);
@@ -35,7 +35,7 @@ class Page extends My_Controller {
         $this->data['slug'] = $slug;
         $this->data['page_title'] = $pageDetails[0]['page_title'];
 
-        
+
         if ($this->process_form)
             $page->processForm();
 
@@ -123,15 +123,24 @@ class Page extends My_Controller {
         redirect('admin/' . $page->slug);
     }
 
-    public function showrooms($type='location') {
-        if ($_POST&&$type=='location') {
+    public function showrooms($type = 'location', $id = '') {
+        if ($type == 'edit') {
+            $s = ShowroomsLocationsTable::getInstance()->find($id);
+            if ($_POST) {
+                if ($s->addShowroomLocation($_POST))
+                    redirect(site_url('admin/page/showrooms'));
+            } else {
+
+                $s->populate();
+            }
+        } elseif ($_POST && $type == 'location') {
             $s = new ShowroomsLocations();
-            
-            if($s->addShowroomLocation($_POST))
+
+            if ($s->addShowroomLocation($_POST))
                 redirect(site_url('admin/page/showrooms'));
-        }elseif($_POST){
+        }elseif ($_POST) {
             validte_url(URL_PREFIX_SHOWROOMS);
-            if( $this->form_validation->run()){
+            if ($this->form_validation->run()) {
                 save_url(URL_PREFIX_SHOWROOMS);
             }
             redirect(site_url('admin/page/showrooms'));
@@ -144,6 +153,7 @@ class Page extends My_Controller {
                 $responce[$key]["showroom_name"] = $value['name'];
                 $responce[$key]["showroom_address"] = $value['address'];
                 $responce[$key]["showroom_tel"] = $value['tel'];
+                $responce[$key]['showroom_edit'] = '<a href="' . site_url('admin/page/showrooms/edit/' . $value['id']) . '">' . lang('global_edit') . '</a>';
                 $responce[$key]['showroom_delete'] = '<a class="delete_lnk" href="' . site_url('admin/page/delete_showroom/' . $value['id']) . '">' . lang('global_delete') . '</a>';
             }
         }

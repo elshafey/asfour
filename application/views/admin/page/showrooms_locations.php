@@ -4,7 +4,7 @@
     $(document).ready(function(){
         $('#map').gMap({
             latitude: $('#latitude'),
-            longitude: $('#longitude')            
+            longitude: $('#longitude')
         });                
     });	    
 </script>
@@ -26,13 +26,13 @@
         <li>   
             <?php echo lang('showrooms_tel', 'showrooms_tel'); ?>
             <input type="text" class="txtbox" name="tel" id="" value="<?php echo set_value('tel') ?>" />
-            <span class="star">*</span>
+<!--            <span class="star">*</span>-->
             <?php echo form_error('tel') ?>
         </li>
         <li>  
             <?php echo lang('showrooms_fax', 'showrooms_fax'); ?>
             <input type="text" class="txtbox" name="fax" id="" value="<?php echo set_value('fax') ?>" />
-            <span class="star">*</span>
+<!--            <span class="star">*</span>-->
             <?php echo form_error('fax') ?>
         </li>
         <li>   
@@ -61,12 +61,14 @@
             "address",
             "tel.",                    
             "",
+            "",
         ],
         colModel:
             [
             {name:"showroom_name",index:"showroom_name",width:80},
             {name:"showroom_address",index:"showroom_address",width:80},
             {name:"showroom_tel",index:"showroom_tel",width:80},
+            {name:"showroom_edit",index:"showroom_edit",width:80},
             {name:"showroom_delete",index:"showroom_delete",width:80}
         ],
         rowNum:10,
