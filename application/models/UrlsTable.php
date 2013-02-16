@@ -24,7 +24,7 @@ class UrlsTable extends Doctrine_Table
                 ->from('Urls')
                 ->where('url_routed=?',$url_routed)
                 ->andWhere('url_original!=?', $url_original)
-                ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)
-                ->execute();
+//                ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)
+                ->fetchOne();
     }
 }

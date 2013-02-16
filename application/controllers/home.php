@@ -108,7 +108,7 @@ class Home extends My_Controller {
         $this->data['prod_banner'] = $product['prod_banner'];
 
         if (!isset($this->data['prod_imagges']) || !$this->data['prod_imagges'])
-            $this->data['prod_imagges'] = ProductImagesTable::getImages($prod_id);
+            $this->data['prod_imagges'] = ProductImagesTable::getImages($prod_id,'',true);
         $this->data['prod_tabs'] = ProductTabsTable::getTabs($prod_id, get_language_id(), true, true);
         $this->data['prod_id'] = $prod_id;
         if (!isset($this->data['pdfs']))

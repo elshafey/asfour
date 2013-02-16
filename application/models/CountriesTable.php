@@ -32,4 +32,12 @@ class CountriesTable extends Doctrine_Table
         }
         return $q->execute();
     }
+    
+    public static function checkUnique($value,$id=''){
+        $country=  self::getInstance()->findBySql('country_name=? AND country_id!=?', array($value,$id));
+//        pre_print($country);
+        if(count($country))
+            return $country[0];
+        return false;
+    }
 }

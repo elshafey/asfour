@@ -35,6 +35,7 @@ class BannersTable extends Doctrine_Table
                 ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY);
         $q->where('banner_type=?','banner');
         $q->andWhere('banner_scope="HOME" OR banner_scope LIKE ""');
+        $q->andWhere('banner_is_active=1');
         return $q->execute();
     }
 }

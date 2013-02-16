@@ -76,7 +76,7 @@
         <li class="btns">
             <input type="hidden" name="action_name"  value="edit_image" >
             <input type="submit" value="<?php echo lang('global_btn_save') ?>" />
-            <a href="<?php echo site_url('admin/news') ?>" class="cancel_link" value=""><?php echo lang("global_btn_cancel"); ?></a>
+<!--            <a href="<?php echo site_url('admin/news') ?>" class="cancel_link" value=""><?php echo lang("global_btn_cancel"); ?></a>-->
         </li>
     </ul>
 </form>

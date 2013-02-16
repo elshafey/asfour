@@ -18,6 +18,7 @@ if (!defined('BASEPATH'))
  * @property CI_URI     $uri
  * @property CI_Template     $template
  * @property CI_Lang     $lang
+ * @property My_Form_validation     $form_validation
  * 
  */
 class My_Controller extends CI_Controller {
