@@ -1,6 +1,6 @@
 <?php
 
-$lang['banners_title']          ='Media Ceter';
+$lang['banners_title']          ='Media Center';
 $lang['banner_add_new_title']   ='Add new image';
 $lang['banner_add_path']        ='Select image';
 $lang['banner_btn_browse']      ='Browse server';

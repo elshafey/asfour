@@ -1,6 +1,6 @@
 <?php
 
-$lang['banners_title']          ='Manage home page banners';
+$lang['banners_title']          ='Manage banners';
 $lang['banner_add_new_title']   ='Add new banner';
 $lang['banner_add_path']        ='Select banner';
 $lang['banner_btn_browse']      ='Browse server';
@@ -12,6 +12,8 @@ $lang['banner_url']             ='Banner url';
 $lang['banner_page']            ='Banner page';
 $lang['video_img_path']         ='Video image';
 $lang['video_url']              ='Video URL';
+$lang['banner_video_section']   ='Manage video';
+$lang['banner_meta_tags']       ='Manage meta info';
 //$lang['']='';
 //$lang['']='';
 //$lang['']='';

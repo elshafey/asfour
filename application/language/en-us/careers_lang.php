@@ -2,6 +2,8 @@
 
 $lang['careers_crete_page_title'] ='New Job';
 
+$lang['careers_page_title'] ='Careers';
+
 $lang['careers_list_new']       ='Create new Job';
 
 $lang['careers_form_job_code'] ='Job code';

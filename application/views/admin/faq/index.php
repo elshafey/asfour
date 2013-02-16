@@ -32,7 +32,7 @@
         <?php foreach (get_lang_list() as $code => $lang) { ?>
         {name:"faq_question_<?php echo $code ?>",index:"faq_question_<?php echo $code ?>",width:80},
         <?php } ?>
-        {name:"faq_order",index:"faq_order",width:80,width:80,classes:'grid_center'},
+        {name:"faq_order",index:"faq_order",width:80,width:80,classes:'grid_center',sorttype:function(cell,row){return parseInt($(cell).text());}},
         {name:"faq_is_active",index:"faq_is_active",width:80,width:80,classes:'grid_center'},
         {name:"faq_edit",index:"faq_is_active",width:80},
         {name:"faq_delete",index:"faq_is_active",width:80}

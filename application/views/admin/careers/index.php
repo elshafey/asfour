@@ -50,7 +50,7 @@
 <?php foreach (get_lang_list() as $code => $lang) { ?>
                 {name:"job_title_<?php echo $code ?>",index:"job_title_<?php echo $code ?>",width:80},
 <?php } ?>
-            {name:"job_order",index:"job_order",width:80},
+            {name:"job_order",index:"job_order",width:80,sorttype:function(cell,row){return parseInt($(cell).text());}},
             {name:"job_is_active",index:"job_is_active",width:80,classes:'grid_center'},
             {name:"job_edit",index:"job_is_active",width:80},
             {name:"job_delete",index:"job_is_active",width:80}

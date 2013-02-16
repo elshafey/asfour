@@ -51,7 +51,7 @@
         {name:"agent_fax",index:"agent_fax",width:80},
         {name:"agent_tel",index:"agent_tel",width:80},
         {name:"agent_email",index:"agent_email",width:100},
-        {name:"agent_order",index:"agent_order",width:80},
+        {name:"agent_order",index:"agent_order",width:80,sorttype:function(cell,row){return parseInt($(cell).text());}},
         {name:"agent_is_active",index:"agent_is_active",width:80,classes:'grid_center'},
         {name:"agent_edit",index:"agent_edit",width:80},
         {name:"agent_delete",index:"agent_delete",width:80},

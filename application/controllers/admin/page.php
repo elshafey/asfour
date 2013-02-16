@@ -160,7 +160,7 @@ class Page extends My_Controller {
         populate_url(URL_PREFIX_SHOWROOMS);
         validte_url(URL_PREFIX_SHOWROOMS);
         $this->form_validation->run();
-
+        $this->data['page_title'] =lang('page_showrooms_title');
         $this->data['showroom_json'] = json_encode($responce);
         load_grid_files();
         $this->data['showrooms'] = array();

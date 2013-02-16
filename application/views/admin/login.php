@@ -1,4 +1,4 @@
-<?php echo form_open(); ?>
+<?php echo form_open('','AUTOCOMPLETE="OFF"'); ?>
 <ul>
     <li>
         <label>Username:</label>

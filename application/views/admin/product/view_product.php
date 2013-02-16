@@ -38,7 +38,7 @@
 <?php foreach (get_lang_list() as $code => $lang) { ?>
                         {name:"tab_title_<?php echo $code ?>",index:"tab_title_<?php echo $code ?>",width:80},
 <?php } ?>
-                    {name:"tab_order",index:"tab_order",width:80,classes:'grid_center'},
+                    {name:"tab_order",index:"tab_order",width:80,classes:'grid_center',sorttype:function(cell,row){return parseInt($(cell).text());}},
                     {name:"tab_is_active",index:"tab_is_active",width:80,classes:'grid_center'},
                     {name:"tab_edit",index:"tab_edit",width:80},
                     {name:"tab_delete",index:"tab_delete",width:80},
@@ -78,7 +78,7 @@
                         {name:"pdf_title_<?php echo $code ?>",index:"pdf_title_<?php echo $code ?>",width:80},
 <?php } ?>
                     {name:"tab_id",index:"tab_id",width:180,classes:''},
-                    {name:"pdf_order",index:"pdf_order",width:40,classes:'grid_center'},
+                    {name:"pdf_order",index:"pdf_order",width:40,classes:'grid_center',sorttype:function(cell,row){return parseInt($(cell).text());}},
                     {name:"pdf_is_active",index:"pdf_is_active",width:40,classes:'grid_center'},
                     {name:"pdf_edit",index:"pdf_is_active",width:40},
                     {name:"pdf_delete",index:"pdf_is_active",width:40}

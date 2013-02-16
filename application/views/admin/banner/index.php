@@ -67,6 +67,7 @@
 
 <form method="POST" action="<?php echo site_url();?>admin/banner/change_vedio_url">
     <ul>
+        <li class="section_title"><?php echo lang('banner_video_section') ?></li>
         <li>
             <?php echo lang('video_img_path', 'video_img') ?>
             <input type="text" readonly="readonly" class="txtbox" name="video_img" id="video_img" value="<?php echo set_value('video_img') ?>" />
@@ -88,7 +89,7 @@
 
 <form method="POST" action="<?php echo site_url();?>admin/banner/home_tags">
     <ul>
-        
+        <li class="section_title"><?php echo lang('banner_meta_tags') ?></li>
         <?php print_url_info(true) ?>
         <li class="btns">
             <input type="submit" value="<?php echo lang('global_btn_save') ?>" />

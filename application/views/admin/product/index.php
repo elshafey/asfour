@@ -23,7 +23,7 @@
         <?php foreach (get_lang_list() as $code => $lang) { ?>
         {name:"prod_title_<?php echo $code ?>",index:"prod_title_<?php echo $code ?>",width:80},
         <?php } ?>        
-            {name:"prod_order",index:"prod_order",width:80,sorttype:function(cell,row){return parseInt($(cell).html());}},
+         {name:"prod_order",index:"prod_order",width:80,sorttype:function(cell,row){return parseInt($(cell).text());}},
         {name:"tabs",index:"tabs",width:80},
         {name:"prod_is_active",index:"prod_is_active",width:80,classes:'grid_center'},
         {name:"prod_edit",index:"prod_is_active",width:80},
