@@ -79,7 +79,7 @@ class Showrooms extends My_Controller {
         $srl = new ShowroomsLocations();
         $srl->deleteShowroom($id);
 
-        redirect(site_url('admin/page/showrooms'));
+        redirect(site_url('admin/showrooms'));
     }
 
 }
