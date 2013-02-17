@@ -52,6 +52,7 @@
 <table id="list2"></table>
 <div id="pager2"></div>
 <script>
+    var mydata = <?php echo $showroom_json ?>;
     jQuery("#list2").jqGrid(
     { 
         direction:'<?php echo get_dir() ?>',
@@ -79,12 +80,13 @@
         sortname: 'showroom_order',
         viewrecords: true,
         sortorder: "desc",
+        data:mydata,
         loadonce: true
     });
     jQuery("#list2").jqGrid('navGrid','#pager2',{edit:false,add:false,del:false,search:false});
-    var mydata = <?php echo $showroom_json ?>;
-    for(var i=0;i<=mydata.length;i++) 
-        jQuery("#list2").jqGrid('addRowData',i+1,mydata[i]);
+    
+//    for(var i=0;i<=mydata.length;i++) 
+//        jQuery("#list2").jqGrid('addRowData',i+1,mydata[i]);
 </script>
 <form method="POST" action="<?php echo site_url('/admin/page/showrooms/meta') ?>">
     <ul>

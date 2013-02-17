@@ -21,6 +21,7 @@
 </form>
 
 <script>
+    var mydata = <?php echo $news_json ?>;
     jQuery("#list2").jqGrid(
     { 
         direction:'<?php echo get_dir() ?>',
@@ -52,10 +53,9 @@
         sortname: 'news_order',
         viewrecords: true,
         sortorder: "desc",
+        data:mydata,
         loadonce: true
     });
     jQuery("#list2").jqGrid('navGrid','#pager2',{edit:false,add:false,del:false,search:false});
-    var mydata = <?php echo $news_json ?>;
-    for(var i=0;i<=mydata.length;i++) 
-        jQuery("#list2").jqGrid('addRowData',i+1,mydata[i]);
+    
 </script>
