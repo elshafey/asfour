@@ -17,4 +17,5 @@ $lang['showrooms_address']                   ='Showrooms address';
 $lang['showrooms_tel']                       ='Showrooms tel';
 $lang['showrooms_fax']                       ='Showrooms fax';
 $lang['showrooms_meta_manage']               ='Manage page info';
+$lang['showrooms_new']                       ='New showroom';
 ?>
