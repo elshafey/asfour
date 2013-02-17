@@ -30,7 +30,7 @@ class NewsDetailsTable extends Doctrine_Table
     }
     
     public static function getNewsCount($type = 1){
-        return Doctrine_Query::create()
+        return (int)Doctrine_Query::create()
                 ->select('count(*)/2')
                 ->from('NewsDetails n,n.Articles a')
                 ->andWhere('n.news_type=?', $type)

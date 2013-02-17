@@ -223,7 +223,7 @@ class Home extends My_Controller {
         $this->data['news_count'] = NewsDetailsTable::getNewsCount(1);
         $this->data['press_count'] = NewsDetailsTable::getNewsCount(2);
         $this->data['banner_path'] = get_banner_bath("URL_PREFIX_MEDIACENTER");
-
+//        pre_print($this->data);
         $this->data['type'] = $type;
         $this->template->write_view('content', 'home/media_center', $this->data, FALSE);
         $this->template->render();

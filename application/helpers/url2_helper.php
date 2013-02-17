@@ -242,4 +242,12 @@ function get_encoded_url($path){
 //    pre_print($exp);
     return implode('/', $exp);
 }
+
+function get_active_tab($url){
+    /* @var $CI My_Controller */
+    $CI=  get_instance();
+    if(implode('/', $CI->uri->rsegments)==trim($url,'/'))
+        return 'active';
+    
+}
     ?>

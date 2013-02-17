@@ -14,6 +14,11 @@
 <div class="clear"></div>
 
 <div class="news-section">
+    <?php if((!$press_count&&!$news_count)||($type=='news'&&!$news_count)){ ?>
+    <?php echo lang('home_no_media_center') ?>
+    <?php }elseif($type=='press_release'&&!$press_count){ ?>
+    <?php echo lang('home_no_press_releases') ?>
+    <?php }else{ ?>
     <h1 class="left_title">
         <?php echo $page_title ?>
     </h1>
@@ -24,5 +29,6 @@
             <?php echo sub_string_from_start($item['news_description'], 200) . anchor($url, lang('global_more'), 'class="link"'); ?>
         </p>
         <div class="news-separator"></div>
+    <?php } ?>
     <?php } ?>
 </div>
