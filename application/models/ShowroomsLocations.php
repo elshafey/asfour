@@ -24,7 +24,7 @@ class ShowroomsLocations extends BaseShowroomsLocations {
             $this->name = $data['name'];
             $this->address = $data['address'];
             $this->tel = $data['tel'];
-            $$thiss->fax = $data['fax'];
+            $this->fax = $data['fax'];
             $this->longitude = $data['longitude'];
             $this->latitude = $data['latitude'];
             $this->save();
