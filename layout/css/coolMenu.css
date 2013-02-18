@@ -1,0 +1,22 @@
+#menu {
+/*    float: left;*/
+    margin-bottom: 15px;
+    height: 15px;
+/*    padding-bottom: 7px;*/
+}
+#menu > li {
+    float: left;
+    height: 25px;
+}
+
+#menu ul {
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+#menu ul li a {
+    width: 80px;
+}
+#menu li:hover ul.noJS {
+    display: block; 
+}
