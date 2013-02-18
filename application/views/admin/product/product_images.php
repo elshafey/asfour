@@ -54,7 +54,7 @@
             <script>
                 $('#upload_image').click(function(e){
                     e.preventDefault();
-                    $.post(site_url('asfour/index.php?/admin/product/add_image/<?php echo $prod_id ?>'),{
+                    $.post('<?php  echo site_url('admin/product/add_image/'.$prod_id )?>',{
                         path:$('#path').val(),
                         image_alt:$('#image_alt').val(),
                         image_title:$('#image_title').val(),
