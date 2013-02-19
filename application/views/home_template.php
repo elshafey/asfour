@@ -21,32 +21,13 @@
                 <div class="header_separator"></div>
                 <div class="header_title"></div>
                 <div class="clear"></div>
-
-                <!--                <div id="menu">                  
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE . 'about-us')) ?>" class="about_us"></a><span class="separator"></span>
-                                    <div class="products">
-                                        <ul class="sub-menu" style="display: none">
-                <?php foreach ($products as $key => $value) { ?>
-                                                            <li><a href="<?php echo site_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>" title="<?php echo base_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>"><?php echo $value['ProductDetails'][0]['prod_title'] ?></a></li>
-                <?php } ?>
-                                        </ul>
-                                    </div>
-                                    <span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE) . URL_PREFIX_QUALITY) ?>" class="quality"></a><span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" class="worldwide"></a><span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS)) ?>" class="media_center"></a><span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_FAQS)) ?>" class="faq"></a><span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_CAREER)) ?>" class="careers"></a><span class="separator"></span>
-                                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" class="contact_us"></a>
-                                    <div class="clear"></div>
-                                </div>-->
                 <ul id="menu">
                     <li>
                         <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE . 'about-us')) ?>" class="about_us" ></a><span class="separator"></span>
                     </li>
                     <li>
                         <a href="javascript:;" class="products"></a>
-                        <ul class="sub-menu" class="noJS">
+                        <ul class="sub-menu noJS" >
                             
                             <?php foreach ($products as $key => $value) { ?>
                                 <li><a href="<?php echo site_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>" title="<?php echo base_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>"><?php echo $value['ProductDetails'][0]['prod_title'] ?></a></li>
@@ -59,7 +40,7 @@
                     </li>
                     <li>
                         <a href="javascript:;" class="worldwide"></a>
-                        <ul class="sub-menu" class="noJS">
+                        <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" >Asfour Worldwide</a>
                             </li>
@@ -71,7 +52,7 @@
                     </li>
                     <li>
                         <a href="javascript:;" class="media_center"></a>
-                        <ul class="sub-menu" class="noJS">
+                        <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" ><?php echo lang('home_media_center_news') ?></a>
                             </li>
@@ -89,7 +70,7 @@
                     </li>
                     <li>
                         <a href="javascript:;"class="contact_us"></a>
-                        <ul class="sub-menu" class="noJS">
+                        <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" >Contact Us</a>
                             </li>
