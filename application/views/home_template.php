@@ -26,7 +26,7 @@
                         <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE . 'about-us')) ?>" class="about_us" ></a><span class="separator"></span>
                     </li>
                     <li>
-                        <a href="javascript:;" class="products"></a>
+                        <a href="javascript:" class="products"></a>
                         <ul class="sub-menu noJS" >
                             
                             <?php foreach ($products as $key => $value) { ?>
@@ -39,7 +39,7 @@
                         <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE) . URL_PREFIX_QUALITY) ?>" class="quality"></a><span class="separator"></span>
                     </li>
                     <li>
-                        <a href="javascript:;" class="worldwide"></a>
+                        <a href="javascript:" class="worldwide"></a>
                         <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" >Asfour Worldwide</a>
@@ -51,7 +51,7 @@
                         <span class="separator"></span> 
                     </li>
                     <li>
-                        <a href="javascript:;" class="media_center"></a>
+                        <a href="javascript:" class="media_center"></a>
                         <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" ><?php echo lang('home_media_center_news') ?></a>
@@ -69,7 +69,7 @@
                         <a href="<?php echo site_url(get_routed_url(URL_PREFIX_CAREER)) ?>" class="careers"></a><span class="separator"></span>    
                     </li>
                     <li>
-                        <a href="javascript:;"class="contact_us"></a>
+                        <a href="javascript:" class="contact_us"></a>
                         <ul class="sub-menu noJS" >
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" >Contact Us</a>
