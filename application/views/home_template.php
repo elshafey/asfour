@@ -54,7 +54,7 @@
                         <a href="javascript:" class="media_center"></a>
                         <ul class="sub-menu noJS" >
                             <li>
-                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_NEWS)) ?>" ><?php echo lang('home_media_center_news') ?></a>
+                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS)) ?>" ><?php echo lang('home_media_center_news') ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_PRESS_RELEASE)) ?>" ><?php echo lang('home_media_center_pressrelease') ?></a>    
