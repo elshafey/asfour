@@ -9,7 +9,7 @@ $(document).ready(function() {
     var popWidth = dim[0].split('=')[1]; //Gets the first query string value
 
     //Fade in the Popup and add close button
-    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close_popup"><img src="'+ site_url() +'asfour/layout/images/close-icon.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close_popup"><img src="'+ site_url() +'layout/images/close-icon.png" class="btn_close" title="Close Window" alt="Close" /></a>');
     $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close_popup"></a>');
 
     //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
