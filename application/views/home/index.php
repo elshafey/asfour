@@ -74,4 +74,4 @@
 
 <div id="popup_name" class="popup_block">   
     <iframe id="vedio_iframe" width="420" height="315" src="<?php echo $video_url;?>" frameborder="0"></iframe>
-</div> 
+</div>

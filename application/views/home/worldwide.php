@@ -22,6 +22,8 @@
     </p>
 </div>
 <div style="width: 254px;float: right;margin-top: 15px;">
+    Distributres of Crystal fashion components, please send email to: <a href="mailto:  cfc@asfourcrystal.com" style="color: #2CB2CF;"> cfc@asfourcrystal.com</a> <br /><br />
+    Distributres of Lighting, please send email to: <a href="mailto:  lighting@asfourcrystal.com " style="color: #2CB2CF;"> lighting@asfourcrystal.com </a> <br /><br />
     Distributres of Crystal Parts, please send email to: <a href="mailto:  crystal.parts@asfourcrystal.com" style="color: #2CB2CF;"> crystal.parts@asfourcrystal.com</a> <br /><br />
     Distributres of Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
     Distributres of Crys-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
