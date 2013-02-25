@@ -72,7 +72,7 @@
                         <a href="javascript:" class="contact_us"></a>
                         <ul class="sub-menu noJS" >
                             <li>
-                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" >Contact Us</a>
+                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" >Contact Info</a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url('home/showrooms'); ?>" >Showrooms locations</a>    

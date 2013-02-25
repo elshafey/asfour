@@ -24,7 +24,7 @@
 <div style="width: 254px;float: right;margin-top: 15px;">
     Distributres of Crystal Parts, please send email to: <a href="mailto:  crystal.parts@asfourcrystal.com" style="color: #2CB2CF;"> crystal.parts@asfourcrystal.com</a> <br /><br />
     Distributres of Gifts, please send email to: <a href="mailto: gifts@asfourcrystal.com" style="color: #2CB2CF;">gifts@asfourcrystal.com</a> <br /><br />
-    Distributres of Crystal-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
+    Distributres of Crys-Tile, please send email to: <a href="mailto: crystile@asfourcrystal.com" style="color: #2CB2CF;">crystile@asfourcrystal.com</a> <br />
 </div>
 <div class="inside-left" style="width: 330px">
     <div class="countries">
