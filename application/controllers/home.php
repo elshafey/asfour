@@ -298,7 +298,7 @@ class Home extends My_Controller {
 
         $this->data['page_title'] = $url['url_page_title'];
 
-        $this->data['showrooms'] = ShowroomsLocationsTable::getAllShowroomsLocations();
+        $this->data['showrooms'] = ShowroomsLocationsTable::getAllShowroomsLocations(true);
 
         $this->data['active_showrooms'] = 'active';
 

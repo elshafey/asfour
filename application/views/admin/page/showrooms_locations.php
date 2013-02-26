@@ -10,9 +10,11 @@
         direction:'<?php echo get_dir() ?>',
         datatype: "local",
         colNames:[
-            "name",
-            "address",
-            "tel.",                    
+            "Name",
+            "Address",
+            "Tel.",                    
+            "Location order",
+            "Is active?",
             "",
             "",
         ],
@@ -21,6 +23,8 @@
             {name:"showroom_name",index:"showroom_name",width:80},
             {name:"showroom_address",index:"showroom_address",width:80},
             {name:"showroom_tel",index:"showroom_tel",width:80},
+            {name:"location_order",index:"location_order",width:80},
+            {name:"is_active",index:"is_active",width:80},
             {name:"showroom_edit",index:"showroom_edit",width:80},
             {name:"showroom_delete",index:"showroom_delete",width:80}
         ],

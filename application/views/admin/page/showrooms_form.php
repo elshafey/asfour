@@ -35,6 +35,16 @@
 <!--            <span class="star">*</span>-->
             <?php echo form_error('fax') ?>
         </li>
+        <li>
+            <?php echo lang('showrooms_form_order','location_order') ?>
+            <input type="text" class="txtbox" name="<?php echo 'location_order' ?>" id="<?php echo 'location_order' ?>" value="<?php echo set_value('location_order') ?>" />
+            <span class="star">*</span>
+            <?php echo form_error("location_order"); ?>
+        </li>
+        <li>
+            <?php echo lang("showrooms_form_active",'is_active'); ?>
+            <input name="is_active" id="is_active" value="<?php echo set_value("is_active", "0") ?>" <?php echo set_checkbox("is_active", "1") ?>  type="checkbox" />
+        </li>
         <li>   
             <span style="margin-left: 478px;" class="frm_error_msg"><?php if (form_error('longitude') || form_error('latitude')) echo lang('showrooms_location_error') ?></span>
             <div style="width: 400px;margin-left: 175px;" id="map"></div>

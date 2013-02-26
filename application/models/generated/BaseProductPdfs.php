@@ -13,8 +13,8 @@ Doctrine_Manager::getInstance()->bindComponent('ProductPdfs', 'default');
  * @property string $pdf_path
  * @property integer $pdf_is_active
  * @property integer $pdf_order
- * @property ProductTabs $ProductTabs
  * @property Products $Products
+ * @property ProductTabs $ProductTabs
  * @property Doctrine_Collection $PdfDetails
  * 
  * @package    ##PACKAGE##
@@ -86,13 +86,13 @@ abstract class BaseProductPdfs extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('ProductTabs', array(
-             'local' => 'tab_id',
-             'foreign' => 'tab_id'));
-
         $this->hasOne('Products', array(
              'local' => 'prod_id',
              'foreign' => 'prod_id'));
+
+        $this->hasOne('ProductTabs', array(
+             'local' => 'tab_id',
+             'foreign' => 'tab_id'));
 
         $this->hasMany('PdfDetails', array(
              'local' => 'pdf_id',

@@ -27,6 +27,8 @@ class ShowroomsLocations extends BaseShowroomsLocations {
             $this->fax = $data['fax'];
             $this->longitude = $data['longitude'];
             $this->latitude = $data['latitude'];
+            $this->location_order = $data['location_order'];
+            $this->is_active = $data['is_active'];
             $this->save();
             return true;
         }
@@ -42,6 +44,8 @@ class ShowroomsLocations extends BaseShowroomsLocations {
         $this->CI->form_validation->set_rules("fax", "", "numeric|xss_clean");
         $this->CI->form_validation->set_rules("longitude", "", "required|numeric|xss_clean");
         $this->CI->form_validation->set_rules("latitude", "", "required|numeric|xss_clean");
+        $this->CI->form_validation->set_rules("location_order", "", "required|numeric|xss_clean");
+        $this->CI->form_validation->set_rules("is_active", "", "required|xss_clean");
 
         return $this->CI->form_validation->run();
     }
@@ -53,6 +57,8 @@ class ShowroomsLocations extends BaseShowroomsLocations {
         $_POST['fax']=  $this->fax;
         $_POST['longitude']=  $this->longitude;
         $_POST['latitude']=  $this->latitude;
+        $_POST['location_order']=  $this->location_order;
+        $_POST['is_active']=  $this->is_active;
         $this->validateForm();
     }
 

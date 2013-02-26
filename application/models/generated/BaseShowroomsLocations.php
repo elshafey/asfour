@@ -12,6 +12,8 @@ Doctrine_Manager::getInstance()->bindComponent('ShowroomsLocations', 'default');
  * @property string $address
  * @property string $tel
  * @property string $fax
+ * @property integer $is_active
+ * @property integer $location_order
  * @property string $longitude
  * @property string $latitude
  * @property timestamp $created_at
@@ -67,6 +69,26 @@ abstract class BaseShowroomsLocations extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '1',
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('location_order', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '1',
              'notnull' => true,
              'autoincrement' => false,
              ));
