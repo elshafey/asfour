@@ -63,7 +63,7 @@
             <a href="<?php echo $url ?>">
                 <img src="<?php echo get_static_url($product['prod_home_img']) ?>" alt="<?php echo $product['ProductDetails'][0]['prod_title'] ?>" title="<?php echo $product['ProductDetails'][0]['prod_title'] ?>" width="145" height="94" />
             </a>
-            <?php echo sub_string_from_start($product['ProductDetails'][0]['prod_summary'], 40) ?>
+            <?php echo $product['ProductDetails'][0]['prod_summary'] ?>
             <a href="<?php echo $url ?>" class="home-more-link"><?php echo lang('global_more') ?></a>
         </li>
     <?php } ?>
