@@ -28,7 +28,7 @@
                     <li>
                         <a href="javascript:" class="products"></a>
                         <ul class="sub-menu noJS" >
-                            
+
                             <?php foreach ($products as $key => $value) { ?>
                                 <li><a href="<?php echo site_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>" title="<?php echo base_url() . get_routed_url(URL_PREFIX_PRODUCT_VIEW . $value['prod_id']) ?>"><?php echo $value['ProductDetails'][0]['prod_title'] ?></a></li>
                             <?php } ?>
@@ -96,5 +96,15 @@
                 &copy; Asfour Crystal - All Rights Reserved. <a href="<?php echo site_url(get_routed_url('home/page/privacy-statement')) ?>" style="font-size: 10px">Privacy Statement</a>
             </div>
         </div>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-39852601-1', 'asfourcrystal.com');
+            ga('send', 'pageview');
+
+        </script>
     </body>
 </html>
