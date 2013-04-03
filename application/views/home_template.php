@@ -13,6 +13,15 @@
         <script src="<?php echo base_url(); ?>layout/js/content.js" type="text/javascript"></script>
         <?php echo $_scripts ?>
         <?php // $menuProducts= ProductsTable::getProducts(get_language_id(), true, true) ?>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-39852601-1', 'asfourcrystal.com');
+            ga('send', 'pageview');
+        </script>
     </head>
     <body>
         <div id="wrapper">
@@ -96,15 +105,5 @@
                 &copy; Asfour Crystal - All Rights Reserved. <a href="<?php echo site_url(get_routed_url('home/page/privacy-statement')) ?>" style="font-size: 10px">Privacy Statement</a>
             </div>
         </div>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-39852601-1', 'asfourcrystal.com');
-            ga('send', 'pageview');
-
-        </script>
     </body>
 </html>
