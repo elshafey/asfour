@@ -5,9 +5,9 @@
 </style>
 <div class="inside-banner"></div>
 <div class="inside-menu">
-    <a href="<?php echo site_url('home/worldwide'); ?>" class="active">Asfour Worldwide</a>
+    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)); ?>" class="active">Asfour Worldwide</a>
     <span class="separator"></span>
-    <a href="<?php echo site_url('home/become_agent'); ?>">Become an Agent</a>
+    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_BE_AGENT)); ?>">Become an Agent</a>
 </div>
 <div class="clear"></div>
 <h1 class="left_title">

@@ -41,6 +41,7 @@ class Careers extends My_Controller {
 //        pre_print($responce);
 //        
         $this->lang->load('page');
+        /* @var Pages $page */
         $page = PagesTable::getInstance()->findOneBy('slug', 'careers');
         $page->populateContentForm();
         if ($this->process_form){    

@@ -35,6 +35,7 @@ class Pages extends BasePages {
                 $pageDetail->lang_id = $language['lang_id'];
                 $pageDetail->save();
             }
+            
             save_url(URL_PREFIX_PAGE.$this->slug);
             return true;
         }
@@ -57,6 +58,7 @@ class Pages extends BasePages {
                 $pageDetail->lang_id = $language['lang_id'];
                 $pageDetail->save();
             }
+            save_url(URL_PREFIX_CAREER);
             return true;
         }
 
@@ -96,7 +98,7 @@ class Pages extends BasePages {
             }
             $_POST['page_banner']=  $this->page_banner;
             $this->CI->process_form = false;
-            
+            populate_url(URL_PREFIX_CAREER);
             $this->validateContentForm();
         }
     }
@@ -120,6 +122,11 @@ class Pages extends BasePages {
         $this->CI->form_validation->set_error_delimiters('<span class="frm_error_msg">', '</span>');
         foreach (get_lang_list() as $key => $lang) {
             $this->CI->form_validation->set_rules("page_content_$key", "", "required");
+        }
+        if($this->page_id){
+            validte_url(URL_PREFIX_CAREER);
+        }else{
+            validte_url();
         }
         $this->CI->form_validation->set_rules("page_banner", "", "required");
         return $this->CI->form_validation->run();

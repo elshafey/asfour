@@ -161,6 +161,7 @@ function print_meta_data($page_title) {
     } elseif (isset($route[$CI->uri->uri_string . '/'])) {
         $uri_string=$CI->uri->uri_string . '/';
     }
+//    echo $CI->uri->uri_string;exit;
     if ($uri_string) {
 
         $url = UrlsTable::getInstance()->findOneBy('url_original', $route[$uri_string]);

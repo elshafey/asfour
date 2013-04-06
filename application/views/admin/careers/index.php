@@ -26,6 +26,7 @@
             <div id="img_thumb" <? if (set_value('page_banner')) { ?> style="background-image: url('<?php echo get_static_url(page_thumb(set_value('page_banner'))) ?>');" class="thumb_div" <? } ?>></div>
             <?php load_file_finder('page_banner', 'BrowseServer', 'SetFileField') ?>
         </li>
+        <?php print_url_info() ?>
         <li>
             <input type="submit" value="<?php echo lang('global_btn_save') ?>" />
         </li>
