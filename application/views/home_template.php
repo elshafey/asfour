@@ -54,7 +54,7 @@
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE)) ?>" >Asfour Worldwide</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('home/become_agent'); ?>">Become an Agent</a>
+                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_BE_AGENT)); ?>">Become an Agent</a>
                             </li>
                         </ul>
                         <span class="separator"></span> 
