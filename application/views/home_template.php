@@ -45,7 +45,7 @@
                         <span class="separator"></span>
                     </li>
                     <li>
-                        <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE) . URL_PREFIX_QUALITY) ?>" class="quality"></a><span class="separator"></span>
+                        <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE. URL_PREFIX_QUALITY) ) ?>" class="quality"></a><span class="separator"></span>
                     </li>
                     <li>
                         <a href="javascript:" class="worldwide"></a>
