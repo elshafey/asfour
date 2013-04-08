@@ -100,7 +100,7 @@
 
             <div id="footer">
                 <div class="menu">
-                    <a href="<?php echo site_url('home/media_center'); ?>">News</a> | <a href="<?php echo site_url('home/sitemap'); ?>">Site Map</a>
+                    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS)); ?>">News</a> | <a href="<?php echo site_url('home/sitemap'); ?>">Site Map</a>
                 </div>
                 &copy; Asfour Crystal - All Rights Reserved. <a href="<?php echo site_url(get_routed_url('home/page/privacy-statement')) ?>" style="font-size: 10px">Privacy Statement</a>
             </div>

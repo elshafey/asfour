@@ -154,6 +154,7 @@ function print_meta_data($page_title) {
     global $route;
     $CI = get_instance();
     $uri_string='';
+//    pre_print($CI->uri);exit;
     if (isset($route[$CI->uri->uri_string])) {
         $uri_string=$CI->uri->uri_string;
     } elseif (isset($route[trim($CI->uri->uri_string, '/')])) {
@@ -162,9 +163,12 @@ function print_meta_data($page_title) {
         $uri_string=$CI->uri->uri_string . '/';
     }
 //    echo $CI->uri->uri_string;exit;
-    if ($uri_string) {
-
-        $url = UrlsTable::getInstance()->findOneBy('url_original', $route[$uri_string]);
+    if ($uri_string||implode('/', $CI->uri->rsegments)=='home/index') {
+        if($uri_string){
+        $url = UrlsTable::getInstance()->findOneBy('url_original', $route[$uri_string],  Doctrine_Core::HYDRATE_ARRAY);
+        }else{
+            $url = UrlsTable::getInstance()->findOneBy('url_original', URL_PREFIX_HOME,  Doctrine_Core::HYDRATE_ARRAY);
+        }
         ?>
         <meta name="description" content="<?php echo $url['url_meta_description'] ?>" />
         <meta name="keywords" content="<?php echo $url['url_meta_keywords'] ?>" />

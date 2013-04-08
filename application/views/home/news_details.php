@@ -5,9 +5,9 @@
 </style>
 <div class="inside-banner"></div>
 <div class="inside-menu">
-    <a href="<?php echo site_url('home/media_center');?>" class="<?php echo isset($active_news) ? $active_news: ''; ?>">News</a>
+    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS))//site_url('home/media_center');?>" class="<?php echo isset($active_news) ? $active_news: ''; ?>">News</a>
     <span class="separator"></span>
-    <a href="<?php echo site_url('home/press_release');?>" class="<?php echo isset($press_release) ? $press_release: ''; ?>">Press Releases</a>
+    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_PRESS_RELEASE))//site_url('home/press_release');?>" class="<?php echo isset($press_release) ? $press_release: ''; ?>">Press Releases</a>
     <span class="separator"></span>
 <!--    <a href="">Medica Contacts</a>-->
 </div>

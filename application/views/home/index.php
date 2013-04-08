@@ -26,7 +26,7 @@
     </div>  
     <div class="about-us-msg">
         <?php echo sub_string_from_start($about_us['content'], 250) ?>....
-        <a href="<?php echo site_url('about-us');?>" class="home-more-link"><?php echo lang('global_more') ?></a>
+        <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE . 'about-us'));?>" class="home-more-link"><?php echo lang('global_more') ?></a>
     </div>
 </div>
 <div class="news_area">

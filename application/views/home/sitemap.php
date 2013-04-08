@@ -22,7 +22,7 @@
 <div class="inside-left">
     <h1 class="left_title"><?php echo $page_title ?></h1>
     <ul>
-        <li><a href="<?php echo site_url('home/page/about-us'); ?>">ABOUT US</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE . 'about-us'))//site_url('home/page/about-us'); ?>">ABOUT US</a></li>
 <!--        <li style="text-transform: uppercase;"><a href="<?php echo site_url('Crystal-Fashion-Components'); ?>">Crystal Fashion Components</a></li>
         <li style="text-transform: uppercase;"><a href="<?php echo site_url('Crystal-Parts'); ?>">Crystal Parts</a></li>
         <li style="text-transform: uppercase;"><a href="<?php echo site_url('Lighting'); ?>">Lighting Collection</a></li>
@@ -43,13 +43,13 @@
                 <?php } ?>
             </li>
         <?php } ?>
-        <li><a href="<?php echo site_url('home/page/asfour-quality'); ?>">ASFOUR QUALITY</a></li>
-        <li><a href="<?php echo site_url('home/worldwide'); ?>">ASFOUR WORLDWIDE</a></li>
-        <li><a href="<?php echo site_url('home/media_center'); ?>">MEDIA CENTER</a></li>
-        <li><a href="<?php echo site_url('home/faq'); ?>">FAQs</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE. URL_PREFIX_QUALITY)); ?>">ASFOUR QUALITY</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_WORLDWIDE))//site_url('home/worldwide'); ?>">ASFOUR WORLDWIDE</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS)); ?>">MEDIA CENTER</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_FAQS)); ?>">FAQs</a></li>
 <!--        <li><a href="<?php echo site_url('home/customer_services'); ?>">CUSTOMER SERVICE</a></li>-->
-        <li><a href="<?php echo site_url('home/contact_us'); ?>">CONTACT US</a></li>
-        <li><a href="<?php echo site_url('home/media_center'); ?>">NEWS</a></li>
-        <li><a href="<?php echo site_url('home/careers'); ?>">CAREERS</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)); ?>">CONTACT US</a></li>
+        <li><a href="<?php echo site_url(get_routed_url(URL_PREFIX_ALL_NEWS)); ?>">NEWS</a></li>
+        <li><a href="<?php echo site_url(URL_PREFIX_CAREER); ?>">CAREERS</a></li>
     </ul>
 </div>
