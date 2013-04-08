@@ -2,7 +2,7 @@
 $route["contact-us"]        ="home/page/contact-us";
 $route["Crystal-Fashion-Components"]        ="home/product/3";
 $route["Crystal-Parts"]        ="home/product/4";
-$route["home/page/asfour-quality"]        ="home/page/asfour-quality";
+$route["asfour-quality"]        ="home/page/asfour-quality";
 $route["about-us"]        ="home/page/about-us";
 $route["Lighting"]        ="home/product/5";
 $route["Gifts"]        ="home/product/6";
@@ -36,6 +36,7 @@ $route["home/news"]        ="home/media_center/news";
 $route["home/become_agent/"]        ="home/become_agent/";
 $route["Crystal Parts"]        ="home/product/9";
 $route["Crystal Applications"]        ="home/product/10";
-$route["home/showrooms/"]        ="home/showrooms/";
+$route["showrooms"]        ="home/showrooms/";
 $route["privacy-statement"]        ="home/page/privacy-statement";
 $route["home/page/careers"]        ="home/page/careers";
+$route["careers"]        ="home/careers/";

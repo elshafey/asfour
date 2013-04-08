@@ -84,7 +84,7 @@
                                 <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" >Contact Info</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('home/showrooms'); ?>" >Showrooms locations</a>    
+                                <a href="<?php echo site_url(get_routed_url(URL_PREFIX_SHOWROOMS)); ?>" >Showrooms locations</a>    
                             </li>
                         </ul>
                     </li>

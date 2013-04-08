@@ -7,7 +7,7 @@
 <div class="inside-menu">
     <a href="<?php echo site_url(get_routed_url(URL_PREFIX_PAGE_CONTACTUS)) ?>" class="<?php echo isset($contact_us) ? $contact_us : ''; ?>">Contact Us</a>
     <span class="separator"></span>
-    <a href="<?php echo site_url(get_routed_url('home/showrooms')) ?>" class="<?php echo isset($active_showrooms) ? $active_showrooms : ''; ?>">Showrooms locations</a>
+    <a href="<?php echo site_url(get_routed_url(URL_PREFIX_SHOWROOMS)) ?>" class="<?php echo isset($active_showrooms) ? $active_showrooms : ''; ?>">Showrooms locations</a>
 </div>
 <div class="clear"></div>
 <h1 class="left_title">
